@@ -1,0 +1,1388 @@
+/*
+Theme Name: Coco Tang
+Author: LVHMedia
+Author URI: http://lvhmedia.co.uk
+version: 1.0
+
+*/
+
+@font-face {
+  font-family: 'Miso-bold';
+  src: url('font/Miso-bold.eot'); /* IE9 Compat Modes */
+  src: url('font/Miso-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/Miso-bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('font/Miso-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('font/Miso-bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+html{
+	height:100%;
+	width:100%;
+}
+
+body{
+	font-family: Miso-bold;
+	margin:0;
+	padding:0;
+	background:#000;
+}
+
+embed, object, iframe{max-width: 100%;}
+
+
+head{
+	background:green;
+}
+
+h1,h2,h3,h4{
+	margin:0px;
+	color:#000;
+}
+
+h1{
+	font-size:2.2em;
+	color:#000;
+}
+
+p{
+	margin: 5px 0;
+}
+
+#main{
+	position:inherit;
+	height:100vh;
+	width:100vw;
+	margin:0;
+	padding:0;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+#main-inner{
+	width:750px;
+	height:100%;
+	margin:0 auto;
+	position:relative;
+	color:#fff;
+	text-align:center;
+	background:#000;
+	margin-top:-5px;
+}
+
+
+#logo{
+	height:110px;
+	width:150px;
+	margin:10% auto 5%;
+	padding:20px;
+	z-index:100;
+	display:none;
+	opacity:0;
+	visibility:visible;
+	text-align:center;
+}
+
+/*Navigation*/
+#home_nav_wrapper{
+	opacity:0;
+	width:100%;
+	height:100vh;
+	background-image:url('images/logo-bg.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	z-index:0;
+}
+
+#home_logo{
+	position:relative;
+	height:100%;
+}
+
+
+#nav_container li{
+	list-style:none;
+}
+
+#home_nav_item{
+	text-decoration:none;
+	margin:0 50px; 
+	font-size:18px;
+}
+
+
+#home_nav_item h1, #home_nav_separator{
+	display:inline-block;
+	width:70px;
+	vertical-align:middle;
+}
+
+#home_nav_separator{
+	font-size:20px;
+	color:#000;
+}
+
+#home_nav_container{
+	list-style:none;
+	text-align:center;
+	padding:0;
+	position:absolute;
+	bottom:30%;
+	left:0px;
+	right:0px;
+	opacity:1;
+}
+
+#home_nav_container a{
+	color:#000;
+	text-decoration:none;
+}
+
+
+#home_nav_contact{
+	opacity:0;
+	padding:10px 0;
+	font-size:28px;
+	color:#000;
+	text-decoration:none;
+	position:absolute;
+	bottom:70px;
+	left:0;
+	right:0;        
+}
+
+#home_nav_item a, #home_nav_contact_container a, 
+#home_nav_contact a{
+	color:#000!important;
+	text-decoration:none;
+}
+/**/
+
+
+/*Home page*/
+
+/* nav*/
+	
+	#nav-wrap{
+		width:750px;
+		margin:0 auto;
+		position:relative;
+		height:50%; 
+
+		}	
+	
+	.nav-container{
+		text-align:center;
+		z-index:999;
+		position:fixed;
+		top:0;
+		opacity:0;
+		width:790px;
+		background:url('images/nav-bg.png');
+		height:55px;
+		margin-left:-28px;
+		-webkit-transition: all 0.9s ease-in-out;
+		-o-transition: all 0.9s ease-in-out;
+		transition: all 0.9 ease-in-out;
+	}
+	
+	
+	/* 3 bars */
+
+	.line, .line-half-left, .line-half-right{
+	  height: 4px;
+	  background-color: #000;
+	  display: block;
+	  -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+	  border-radius: 3px;
+	  margin: 3px auto;
+	}
+	
+	#line-btn{
+		height:40px;
+	}
+	.line-half-left,.line-half-right{
+		width:45%;
+		display:inline-block;
+	}
+	
+	.line-half-left{
+		margin-right:4px;
+		margin-left:-4px;
+	}
+	
+	.line-half-right{
+		margin-right:-4px;
+	}
+	
+	.nav-button:hover{
+	  cursor: pointer;
+	}
+	
+	.nav-button, .icon-button{
+		display:inline-block;
+		height:45px;
+		width:45px;
+		overflow:hidden;
+		cursor:pointer;
+		margin:5px 75px;
+		padding-left:6px;
+	}
+
+	.nav-button.is-active .line:nth-child(2){
+	  opacity: 0;
+	}
+
+	.social-container{
+		width:393px;
+		display:inline-block;
+	}
+	
+	.social-item{
+		background:url('images/nav-bg.png');
+		display:block;
+		padding:5px 10px;
+		margin-bottom:4px;
+	}
+	
+	.social-item a{
+		text-decoration:none;
+		color:#000;
+	}
+	
+	#menu-items-wrap{
+		display:none;
+		background:url('images/nav-bg.png');
+	}
+
+	#insta-items-wrap, #fb-items-wrap, .section-menu-container li{
+		display:none;
+	}
+	
+	#insta-items-wrap{
+		float:left;
+		margin-top:1px;
+	}
+	
+	#fb-items-wrap{
+		float:right;
+		margin-top:1px;
+	}
+	.fadingOut {
+		transition:opacity 0.8s linear;
+		opacity:0;
+	}
+	
+	.nav-main-item, .nav-item{
+		padding:5px 6%;
+		text-align:center;
+		margin-bottom:1px ;
+		font-size:30px;
+		vertical-align:top;
+		display:inline-block;
+		position:relative;
+	}
+
+	.nav-item{
+		width:50px;
+	}
+	
+	.nav-main-item a, .nav-main-item span{
+		width:100%;
+		color:#000;
+		text-decoration:none;
+		cursor:pointer;
+	}
+
+	.social-icon{
+		padding-top:3px;
+	}
+
+	.section-menu-container{
+		list-style:none;
+		color:#fff;
+		position:fixed;
+		display:none;
+		text-align:center;
+		width:790px;	
+	}
+	
+	.section-menu-container ul{
+		list-style:none;
+		text-align:left;
+		padding:0px;
+	}
+	
+	.section-menu-container li{
+		height:30px;
+		background: url('images/nav-bg.png');
+		margin:5px 0;
+		padding:3px 0 5px;
+		text-align:center;
+		width:790px;
+	}
+	
+	.section-menu-container a{
+		font-size:25px;
+		letter-spacing:10px;
+		text-decoration:none;
+		color:#000;
+	}
+	
+	.listing-title{
+		 color:#000;
+		font-size:45px;
+		padding:0;
+		margin:0;
+		line-height:31px;
+	}
+	
+	.nav-show{
+		display:block;
+	}
+	
+	#home-btn{
+		margin:0 50px;
+	}
+
+/*sticky nav*/
+
+.sticky{
+	position:fixed!important;
+	top:0;
+	left:0;
+	right:18px;
+	opacity:0.5;
+	background:#444;
+	width:30%;
+	z-index:999;
+}
+
+.section-title{
+	font-size:55px;
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	height:40px;
+	color:#370e12;
+}
+
+#map{
+	text-align:center;
+	height:500px;
+	width:100%;
+}
+
+.center-text{
+	text-align:center;
+}
+
+.pattern-cafe, .pattern-club{
+	min-height: 160px;
+	background-size:contain;
+	background-repeat:no-repeat;
+	width:100%;
+}
+
+.pattern-cafe{
+	background:url('images/line-boarder-cafe.jpg');
+}
+
+.pattern-club{
+	background:url('images/line-boarder-club.jpg');
+	width:750px;
+	margin:0 auto;
+}
+
+.img-container{
+	width:750px;
+	margin:0 auto;
+}
+
+.img-container img{
+	width:100%;
+	height:auto;
+}
+
+.desc-container{
+	padding:30px 20px;
+	text-align:left;
+	font-size:20px;
+	font-weight:normal;
+	color:#273540;
+}
+
+.desc-container h2{
+	font-weight:normal;
+}
+
+
+/**cafe*/
+
+.cafe-logo-container{
+	position:relative;
+	margin:170px 0 0;
+}
+
+#cafe{
+	background:#d6eddb!important;
+	width:750px;
+	margin:0 auto;
+	text-align:center
+}
+
+
+.cafe-logo-container img, 
+#club-title-container > img, 
+#cafe-logo-container > a:nth-child(1) > img:nth-child(1),
+#club-page-logo-container > a:nth-child(1) > img:nth-child(1)
+{
+	width:125px;
+}
+
+
+#cafe-logo-title{
+	display:block;
+	color:#291111;
+	font-size:38px;
+	margin:0;
+	padding:0;
+}
+
+
+#cafe-logo-container h2{
+	font-size:30px;
+	margin:0 auto;
+}
+
+#cafe-logo-container{
+	text-align:center;
+	margin:50px auto;
+}
+
+#cafe-desc{
+	width:440px;
+	color: #36b07d;
+	font-size:23px;
+	letter-spacing:4px;
+	margin:60px auto 170px;
+}
+
+#cafe-desc p:nth-child(2){
+	letter-spacing:4.5px;
+}
+
+.cafe-wrap{
+	margin:0;
+	background:#d6eddb;
+}
+
+
+/*club*/
+
+#club{
+	background:#000;
+}
+
+.club-logo-container{
+	width:100%;
+	height:1280px;
+	background: url('images/club-bg.jpg');
+	background-position:center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	text-align:center;
+}
+
+ #club-logo-img-wrap{
+	 padding-top:35%;
+	 height:145px;
+	 vertical-align:middle;
+ }
+
+ #club-bread a, span{
+	 color:#ddd;
+
+ }
+ 
+ #club-logo-img-wrap img{
+	  margin:40% 0 0;
+	  width:125px;
+  }
+ 
+#club-logo-title{
+	margin:0 auto;
+	color:#fff;
+	font-size:38px;
+}
+
+#club-page-logo-container{	
+	text-align:center;
+	margin:50px auto;
+	width:125px;
+	width:100%;
+}
+
+#club-title-container{
+	position:absolute;
+	top:50%;
+	left:47%;
+}
+.club-desc-container h2{
+	text-align:left;
+	padding-left:20px;
+	color:#fff;
+}
+
+.club-desc-container > p{
+	font-size:20px;
+	text-align:left;
+	padding-left:20px;
+}
+
+#club-desc{
+	letter-spacing:2px;
+	vertical-align:middle;
+	height:500px;
+	color:#fff;
+	position:relative;
+}
+
+#club-desc > h2{
+	position:absolute;
+	top:240px;
+	left:0px;
+	right:0px;
+}
+
+.club-section-title{
+	font-size:55px;
+	color:#fff;
+	padding:0px;
+	line-height:41px;
+}
+
+#club-title-container > h2{
+	color:#fff;
+}
+
+.club-desc-container{
+	padding:40px 0px;
+}
+
+/*cafe / club nav*/
+
+#club-page-nav,
+#cafe-page-nav{
+	width:750px;
+	position:relative;
+	margin:5% 0;
+}
+
+#club-page-nav ul,
+#cafe-page-nav ul{
+	color:#36b07d;
+	width:750px;
+	text-align:center;
+	padding-left:0;
+	margin:0;
+
+}
+
+#cafe-page-nav li:before{
+	  content:'';
+	  z-index: 10;
+	  display: block;
+	  height: 100%;
+	  background:#000;
+	  opacity:0.5;
+}
+
+#club-page-nav li:before{
+	  content:'';
+	  z-index: 10;
+	  display: block;
+	  height: 100%;
+	  background:#250a05;
+	  opacity:0.4;
+}
+
+
+#club-page-nav li,
+#cafe-page-nav li{
+	height:150px;
+	display:inline-block;
+	font-size:25px;
+	position:relative;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+#cafe-page-nav li{
+	width:31%;
+	margin:5px;
+}
+
+#club-page-nav li{
+	width:32%;
+	margin:5px;
+}
+
+
+#club-page-nav a,
+#cafe-page-nav a{
+	color:#fff;
+	position:absolute;
+	top:42%;
+	bottom:0;
+	right:0;
+	left:0;
+	text-decoration:none;
+}
+
+
+/*club opening times*/
+
+
+
+.grid-row{
+	text-align:left;
+	width:500px;
+	height:30px;
+}
+
+.grid-cell{
+	font-size:20px;
+	display:inline-block;
+	text-align:left;
+	width:165px;
+}
+
+#sunday-cell{
+	width:200px;
+}
+
+#club-hours > .grid-row{
+	margin-left:20px;
+}
+
+/*social link*/
+.social-link{
+	width:500px;
+	margin:5px auto;
+	text-align:right;
+}
+
+.social-link a{
+	height:auto;
+	font-style:italic;
+	font-size:18px;
+	margin:5px;
+	color:#5b98c6;
+	text-decoration:none;
+}
+
+.fadeInBlock {
+    opacity:0;
+}
+
+.frame{
+	 width:750px;
+	 height:auto;
+	 overflow:hidden;
+	 position:relative;
+	 clear:both;
+}
+
+
+/*contacts*/
+
+#contact-container a{
+	color:#fff;
+}
+
+.contact{
+	width:100%;
+	margin:0 auto;
+	height:auto;
+}
+
+.tel,
+#email{
+	color:#fff;
+	font-weight: bold;
+	font-size:20px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+#email{
+	margin-left:50px;
+}
+
+.contact-large-icons{
+	width:300px;
+	height:auto;
+	margin:0 auto;
+	position:relative;
+	display:none;
+}
+
+#mail-large,
+#phone-large{
+	display:inline-block;
+	margin:15px 0;
+}
+
+#phone-large{
+	margin-left:80px;
+}
+
+#tel-large{
+	width:135px;
+	margin:0 auto;
+	display:block;
+}
+
+#tel-small{
+	color:#fff;
+}
+
+/*google-map*/
+
+.gm-style-iw{
+	color:#000;
+}
+
+.map-responsive{
+    overflow:hidden;
+    position:relative;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+/*Home page content*/
+#home-content{
+	margin:0 auto;
+	width:500px;
+	text-align:center;
+	font-weight:bold;
+	font-size:19px;
+}
+
+/************below 750px***********/
+
+@media only screen and (max-width: 750px){
+	
+	#main-inner, .img-container{
+		width:100vw;
+	}
+
+	#club-logo-img-wrap img, .cafe-logo-container img{
+		width:100px;
+	}
+	
+	.section-menu-container li{
+		
+	}
+	
+	#cafe{
+		width:100vw;
+	}
+}
+
+/* ----------- iPhone 6 ----------- */
+/*-------------667------------------*/
+/* landscape */
+
+@media only screen 
+  and (min-width: 667px)
+  and (max-width: 668px)
+  { 
+	.nav-container{
+		width:750px;
+	}
+  
+	#main-inner{
+		width:100%!important;	
+	}
+	
+	.social-container {
+		width: 353px;
+	}
+	
+	.nav-button, .icon-button {
+		margin: 5px 65px;
+	}
+	
+	.nav-main-item, .nav-item {
+		margin: 0 55px;
+	}
+	  
+ }
+
+/* ----------- iPhone 6 ----------- */
+/*-------------375------------------*/
+/* Portrait */
+@media only screen 
+  and (min-width: 320px)
+  and (max-width: 666px)
+  { 
+	
+	body{
+		color:#4c4829;
+	}
+	.entry{
+		background:#000;
+	}
+	
+	#logo{
+		padding:0;
+		margin:20% auto 15%;
+	}
+	#nav {
+		width:105%;
+		height: 105%;
+	}
+	
+	#home-bg{
+		background-position:top center!important;
+		background-size: auto 100%;
+	}
+	
+	#main{
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:top;
+	}
+
+	#main-inner{
+		width:100%;
+		height:100%;
+		margin:0 auto;
+	}
+	
+	#inner-wrap{
+		padding:0;
+		position:relative;
+		margin-top:20%;
+	}
+	
+	#menu-items-wrap{
+		margin-top:11px;
+	}
+	
+	.social-container {
+		width: 185px;
+	}
+	
+	.social-item{
+		margin:10px 0 4px 0;
+		font-size:25px;
+	}
+	
+	
+	.sticky{
+		width:100%
+	}
+	
+	.frame{
+		width:100%;
+	}
+	
+	#home-content{
+		width:100%;
+		height:auto;
+		margin-bottom:50px;
+	}
+	
+	#home-content p{
+		margin:15px 0;
+	}
+
+
+	
+	/*cafe*/
+	
+	
+	#club-page-nav ul, #cafe-page-nav ul, #cafe, #cafe-page-nav{
+		width:auto!important;
+	}
+	
+	#cafe-page-nav li{
+		width:46vw;
+		float:left;
+		display:block;
+	}
+	
+	#cafe-desc{
+		width:390px;
+		color: #36b07d;
+		font-size:20px;
+		letter-spacing:1px;
+		margin:50px auto 0px;
+	}
+	
+	#cafe-desc p:nth-child(2){
+		letter-spacing:1.3px;
+	}
+	
+	.cafe-logo-container{
+		min-height:350px;
+	}
+	
+	
+	#cafe-logo-title, #club-logo-title{
+		font-size:30px;
+		letter-spacing:1px;
+	}
+	
+	.listing-title{
+		padding:5px 0;
+	}
+	
+	/*Nav*/
+	
+	
+	.nav_item {
+		font-size: 50px;
+		text-decoration: none;
+		display: inline-block;
+		margin: 0px 50px;
+	}
+	
+	
+	.nav-container{
+		width:100%;
+		margin-left:0px;
+		padding-top:5px		
+	}
+	
+	.nav-container img{
+		width:35px;
+		height:35px;
+		margin-top:10px;
+	}
+	
+
+	.nav-main-item, .nav-item{
+		font-size:22px;
+		padding:5px 3%;
+	}
+	.section-menu-container li, .section-menu-container {
+		width: 101%;
+	}
+	  
+	.nav-button, .icon-button{
+		margin:0 26px;
+	}
+	
+	#line-btn{
+		height:36px;
+		width:35px;
+		vertical-align:top;
+		margin-top:8px;
+	}
+	
+	.line{
+		margin:2px auto;
+	}
+	
+	.line:nth-child(1){
+		margin:5px 0 1px;
+	}
+	
+	/* Safari 6.1-10.0 (not 10.1, which is the latest version of Safari at this time) */
+
+	@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0){ 
+		@media {
+		#line-btn{
+			margin-top:8px;
+		}
+	}}	
+		
+	/* Safari 10.1+ */
+
+	@media not all and (min-resolution:.001dpcm) { @media {
+
+		#line-btn{
+			margin-top:8px;
+		}
+	}}
+	/*--------------*/
+	
+	#home-btn{
+		margin:0 55px;
+	}
+	.section-menu-container{
+		margin-top:0px;
+	}
+	.section-menu-container ul{
+		margin:0;
+	}
+	
+	.section-menu-container li{
+		padding:0px;
+		margin:5px 0;
+	}
+	
+	.section-menu-container a{
+		font-size:23px;
+		letter-spacing:3px;
+		text-transform:uppercase;
+	}
+	
+	.listing-title{
+		margin-bottom:10px;
+	}
+	
+	#club-title-container{
+		left:38%;
+	}
+	
+	.pattern-cafe, .pattern-club{
+		min-height:130px;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:bottom;
+	}
+	
+
+	.is-draggable img{
+		width:370px;
+		height:300px;
+	}
+	
+	 /*Club*/ 
+	#club-page-nav li{
+		width:46vw;
+	}
+	 
+	.club-logo-container{
+		width:100vw!important;
+		height:655px;
+	}
+	
+	/*contact*/
+	#contact-container{
+		margin:350px auto 70px;
+		position:relative;
+	}
+	
+	.contact{
+		color:#fff;
+		width:100%;
+		height:25px;
+	}
+	
+	.nav_contact{
+		text-decoration:none;
+		font-size:22px;
+	}
+	
+	#nav_contact_tel{
+		margin-top:20%;
+		color:#000!important;
+	}
+	
+	.nav_contact a{
+		color:#000;
+		text-decoration:none;
+	}
+	
+	.tel,#email{
+		position:absolute;
+		font-size:20px;
+	}
+	
+	.tel{
+		top:6px;
+		left:15px;
+	}
+	
+	#email{
+		top:6px;
+		right:15px;
+	}
+
+	.social-link{
+		width:350px;
+	}
+
+	#gm-inner{
+		height:20%!important;
+	}
+
+	/*google map*/
+	.map-responsive{
+		height:100%;
+	}
+	
+	#gmap_canvas{
+		height:40vh!important;
+		width:100vw!important;
+	}
+
+
+
+/* ----------- iPhone 5 ----------- */
+/*-------------320------------------*/
+/* Portrait and Landscape */
+
+@media only screen 
+  and (min-width: 300px) 
+  and (max-width: 374px)
+  {
+	
+	#logo{
+		padding:0;
+		margin:25% auto 15%;
+	}
+  
+	#home-bg{
+		background-position:top center!important;
+		background-size: auto 100%;
+
+	}
+		
+	#main-inner{
+		width:100%!important;
+		height:100%;
+		margin:0 auto;
+	}
+	
+	#inner-wrap{
+		padding:0;
+		position:relative;
+	}
+	
+	.frame{
+		width:750px;
+	}
+	
+	#home-content{
+		width:100%;
+		height:auto;
+	}
+	
+	.social-container{
+		width:49.5%;
+	}
+	
+	.social-item{
+		margin:0 0 4px 0;
+	}
+		
+	
+	.pattern-cafe, .pattern-club{
+		min-height:90px;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:bottom;
+	}
+	
+	.section-menu-container ul{
+		margin:4px auto;
+	}
+
+	
+	/*nav*/
+	.nav_item {
+		text-decoration: none;
+		display: inline-block;
+		font-size: 20px;
+		margin: 0px 30px;
+		width:45px;
+	}
+	  
+	.nav-container{
+		width:100%;
+		margin-left:0px;
+		height:45px;
+	}
+	
+	.nav-container img{
+		width:30px;
+		height:30px;
+		margin-top:7px;
+	}
+	
+	.nav-main-item{
+		margin:0 10px;
+		font-size:20px;
+	}
+	
+	.nav-main-item a, .nav-main-item span{
+		margin-left:-19px;
+	}
+	
+	.nav-main-item, .nav-item{
+		margin:0 9px;
+	}
+	
+	#menu-items-wrap{
+		margin-top:0;
+	  }
+	  
+	.listing-title{
+		line-height:21px;
+		font-size:31px;
+	}
+	
+	.section-menu-container li{
+		height:19px;
+		margin:3px 0;
+		padding:0 0 5px;
+	}
+	
+	.section-menu-container a{
+		font-size:19px;
+		letter-spacing:3px;
+	}
+	
+	#club-title-container{
+		left:35%;
+	}
+		
+	.club-logo-container{
+		height:560px;
+	}
+	
+	
+	#home-btn{
+		margin:0 60px;
+	}
+	
+	
+	#nav_contact_tel{
+		margin-top: 20%;	
+	}
+	
+	.insta-frame, .is-draggable, .is-draggable img{
+		height: 300px;
+	}
+	
+	.is-draggable img{
+		width:320px;
+	}
+	
+	.social-link{
+		width:300px;
+	}
+
+	.nav-button, .icon-button{
+		margin:0 10px;
+	}
+	
+	#line-btn{
+		width:30px;
+		height:36px;
+		margin:2px 30px 0;
+	}
+	
+	.line{
+		margin:0 auto;
+	}
+	
+	/*cafe*/
+	
+		
+		#cafe, #club-page-nav ul, #cafe-page-nav ul{
+			width:100vw!important;
+		}
+	
+		/*cafe nav*/
+		
+		#cafe-page-nav li {
+			width: 46vw;
+			display: block;
+			float:left;
+		}
+	
+		#club-page-nav, #cafe-page-nav {
+			width: 100vw;
+			position: relative;
+			margin: 5% 0;
+		}
+
+
+	#cafe-desc{
+		width:325px;
+		color: #36b07d;
+		font-size:19px;
+		letter-spacing:1px;
+		margin:50px auto 0px;
+	}
+	
+	#cafe-desc p:nth-child(2){
+		letter-spacing:1.3px;
+	}
+	
+	.cafe-logo-container{
+		min-height:320px;
+	}
+	
+	#cafe-logo-title, #club-logo-title{
+		font-size:30px;
+		letter-spacing:1px;
+	}	
+	
+	/*Club*/
+	
+	
+	#club-page-nav li {
+		width: 46vw;
+		margin: 5px;
+	}
+	
+
+	/*contact*/
+
+	#contact-container{
+		margin:300px auto 70px;
+		position:relative;
+	}
+	
+	.contact{
+		color:#fff;
+		width:100%;
+		height:20px;
+	}
+	
+	.nav_contact{
+		text-decoration:none;
+		font-size:23px;
+
+	}
+	
+	.tel,#email{
+		position:absolute;
+		font-size:17px;
+	}
+	
+	.tel{
+		top:2px;
+		left:5px;
+	}
+	
+	#email{
+		top:5px;
+		right:5px;
+	}
+	
+	#map{
+		height:50vh!important;
+		width:100vw!important;
+	}
+	
+}
